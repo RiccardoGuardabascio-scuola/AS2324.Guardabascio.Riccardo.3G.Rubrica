@@ -100,9 +100,22 @@
                         string cognomeInserito = Convert.ToString(Console.ReadLine());
                         for (int i = 0; i < nContatti; i++)
                         {
-                            if (cognomi[i].ToUpper().StartsWith(cognomeInserito)==true)
+                            if (cognomi[i].ToUpper().StartsWith(cognomeInserito.ToUpper())==true)
                             {
                                 Console.WriteLine($"L'iniziale {cognomeInserito} corrisponde al cognome {cognomi[i]}");
+                                Console.WriteLine("\n");
+                            }
+                        }
+                        break;
+                    case 6:
+                        Console.WriteLine("Ricerca di tutti i cognomi che contengono la parte inserita");
+                        Console.WriteLine("Inserire la parte di un cognome da cercare");
+                        string parteCognome = Convert.ToString(Console.ReadLine());
+                        for (int i = 0; i < nContatti; i++)
+                        {
+                            if (cognomi[i].ToUpper().Contains(parteCognome.ToUpper()) == true)
+                            {
+                                Console.WriteLine($"L'iniziale {parteCognome} corrisponde al cognome {cognomi[i]}");
                                 Console.WriteLine("\n");
                             }
                         }
