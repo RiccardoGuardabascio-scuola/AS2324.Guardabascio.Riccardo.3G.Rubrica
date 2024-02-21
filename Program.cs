@@ -81,7 +81,20 @@
                             }
                         }
                         break;
-                    
+                    case 4:
+                        Console.WriteLine("Ricerca di un nominativo case insensitive");
+                        Console.WriteLine("Inserire un nome da cercare");
+                        string nomeInserito=Convert.ToString(Console.ReadLine());
+                        for (int i = 0; i < nContatti; i++)
+                        {
+                            if (nomeInserito.ToUpper() == nomi[i].ToUpper())
+                            {
+                                Console.WriteLine($"Il nome {nomeInserito} corrisponde al contatto numero {i + 1}");
+                                Console.WriteLine("\n");
+                            }
+                        }
+                    break;
+
                 }
             } while (scelta != 0);
 
