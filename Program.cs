@@ -94,6 +94,20 @@
                             }
                         }
                     break;
+                    case 5:
+                        Console.WriteLine("Ricerca di tutti i cognomi in base alle iniziali");
+                        Console.WriteLine("Inserire l'iniziale di un cognome da cercare");
+                        string cognomeInserito = Convert.ToString(Console.ReadLine());
+                        for (int i = 0; i < nContatti; i++)
+                        {
+                            if (cognomi[i].ToUpper().StartsWith(cognomeInserito)==true)
+                            {
+                                Console.WriteLine($"L'iniziale {cognomeInserito} corrisponde al cognome {cognomi[i]}");
+                                Console.WriteLine("\n");
+                            }
+                        }
+                        break;
+
 
                 }
             } while (scelta != 0);
